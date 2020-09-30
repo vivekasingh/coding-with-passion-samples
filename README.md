@@ -1,1 +1,3 @@
-# spring-boot-coding-with-passion
+# spring-boot-samples
+
+Placeholder for various spring boot tips and tricks
