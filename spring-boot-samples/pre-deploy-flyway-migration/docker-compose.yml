@@ -1,0 +1,13 @@
+version: "3.6"
+
+services:
+  pre-deploy-flyway-migration-service:
+    build: .
+    ports:
+      - "8080:8080"
+
+  pre-deploy-flyway-migration-runner:
+    build: .
+    command: java -cp app.jar -Dloader.main=migrate.com.cwp.flyway.example.FlywayMigrationRunner org.springframework.boot.loader.PropertiesLauncher
+    volumes:
+      - "~/.gradle:/root/.gradle"
